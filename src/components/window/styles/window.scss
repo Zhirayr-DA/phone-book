@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+.window {
+  min-width: 220px;
+  min-height: 90px;
+  background: #fff;
+  position: absolute;
+  border-radius: 8px;
+  padding: $vertical-spacing-default 0;
+  border: 1px solid $border-color-default;
+}
+
+.window-row {
+  padding: 0 $horizontal-spacing-default;
+}

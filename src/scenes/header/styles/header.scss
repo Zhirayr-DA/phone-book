@@ -17,7 +17,7 @@
   background: #f2f2f2;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid $border-color-default;
   padding: 0 $horizontal-spacing-default;
 }
 .logo {

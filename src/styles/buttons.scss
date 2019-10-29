@@ -1,5 +1,6 @@
 @import 'variables';
 .button {
+  cursor: pointer;
   &:hover {
     background-color: $button-color-hover;
   }
