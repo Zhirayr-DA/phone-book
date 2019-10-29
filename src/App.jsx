@@ -1,11 +1,11 @@
 import React from 'react';
 import './styles/index.scss';
+import Header from './scenes/header/header';
 
 function App() {
   return (
     <div className="App">
-      <span>Test message 1.</span>
-      <p>The paragraph.</p>
+      <Header />
     </div>
   );
 }
