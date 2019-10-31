@@ -1,8 +1,8 @@
 import React from 'react';
 import HeaderItem from './components/headerItem/HeaderItem';
-import Window from '../../components/window/Window';
 import Menu, { MenuItem } from '../../components/menu/Menu';
 import './styles/header.scss';
+import Switch from '../../components/switch/Switch';
 
 function Header() {
   return (
@@ -17,12 +17,10 @@ function Header() {
           title="Preferences"
           iconName="cog"
           menu={(
-            <Window className="dropdown">
-              <Menu>
-                <MenuItem button><p>Dark theme</p></MenuItem>
-                <MenuItem button><p>Compact mode</p></MenuItem>
-              </Menu>
-            </Window>
+            <Menu>
+              <MenuItem button><Switch label="Dark Theme" /></MenuItem>
+              <MenuItem button><Switch label="Compact mode" /></MenuItem>
+            </Menu>
           )}
         />
       </nav>

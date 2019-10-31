@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Window from '../../../../components/window/Window';
 
 
 function HeaderItem({
@@ -11,14 +12,19 @@ function HeaderItem({
       href={url}
       className="button header-item"
       onClick={(e) => {
-        e.preventDefault();
-        changeActiveState(!activeState);
+        changeActiveState(true);
       }}
-      // onBlur={() => changeActiveState(false)}
     >
       {title}
       <i className={`icon icon-${iconName}`} />
-      {activeState ? menu : null}
+      {
+        activeState ? (
+          <Window className="dropdown" tabIndex={0} onBlur={() => changeActiveState(false)}>
+            {menu}
+          </Window>
+        )
+          : null
+      }
     </a>
   );
 }
@@ -26,7 +32,7 @@ HeaderItem.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   iconName: PropTypes.string.isRequired,
-  menu: PropTypes.node,
+  menu: PropTypes.element,
 };
 HeaderItem.defaultProps = {
   menu: null,
