@@ -1,0 +1,10 @@
+@import '../../../../../styles/variables';
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  padding: $vertical-spacing-default $horizontal-spacing-default;
+  border-bottom: 1px solid $border-color-default;
+  &:nth-child(even) {
+    background-color: #FCFCFC;
+  }
+}

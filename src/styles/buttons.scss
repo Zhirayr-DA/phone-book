@@ -2,6 +2,6 @@
 .button {
   cursor: pointer;
   &:hover {
-    background-color: $button-color-hover;
+    background-color: $button-color-hover !important;
   }
 }
