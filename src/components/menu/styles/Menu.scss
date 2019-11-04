@@ -5,8 +5,7 @@
 
 .menu-item {
   position: relative;
-  padding-top: $vertical-spacing-default ;
-  padding-bottom: $vertical-spacing-default ;
+  padding: $vertical-spacing-default $horizontal-spacing-default;
   > div {
     margin: (-$vertical-spacing-default) (-$horizontal-spacing-default);
     padding: $vertical-spacing-default $horizontal-spacing-default

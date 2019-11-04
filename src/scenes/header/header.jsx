@@ -11,7 +11,19 @@ function Header() {
         <h1>Phonebook</h1>
       </div>
       <nav className="navigation">
-        <HeaderItem url="#" title="Profile" iconName="user" />
+        <HeaderItem
+          url="#"
+          title="Profile"
+          iconName="user"
+          type="popup"
+          menu={(
+            <Menu>
+              <MenuItem>Username</MenuItem>
+              <MenuItem>Age</MenuItem>
+              <MenuItem>Number</MenuItem>
+            </Menu>
+          )}
+        />
         <HeaderItem
           url="#"
           title="Preferences"

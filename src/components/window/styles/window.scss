@@ -1,4 +1,31 @@
 @import '../../../styles/variables';
+.window-container {
+  &.popup {
+    z-index: 999;
+    bottom: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    background-color: rgba(25,25,25,.60);
+    width: 100vw;
+    height: 100vh;
+    .window {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  &.dropdown {
+    .window {
+      margin-top: $vertical-spacing-default;
+      right: 0;
+      top: 100%;
+    }
+  }
+}
 .window {
   min-width: 220px;
   background: #fff;
@@ -6,9 +33,11 @@
   border: 1px solid $border-color-dark;
   position: absolute;
   box-shadow: 0 2px 10px rgba(0,0,0,.2);
-  padding: $horizontal-spacing-default;
+  //padding: $horizontal-spacing-default;
   &:focus {
-    width: 500px;
+    width: 1500px;
   }
+
+
 
 }

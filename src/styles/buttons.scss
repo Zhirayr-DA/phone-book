@@ -1,7 +1,7 @@
 @import 'variables';
 .button {
   cursor: pointer;
-  &:hover {
+  &:hover, &.active {
     background-color: $button-color-hover !important;
   }
 }
